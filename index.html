@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Publicidad</title>
+    <link rel="stylesheet" href="style.css"> <!--Hoja de estilo en cascada-->
+</head>
+<body>
+    <div class="contenedor"> <!--Contenedor principal-->
+    <h1>Gestión de Anuncios Publicitarios</h1>
+    <form id="formulario"> <!--Formulario para ingresar los datos del anuncio del usuario-->
+        <div class="grupo-contenedor">
+            <label for="nombre">Nombre:</label> <!--Nombre del anuncio-->
+            <input type="text" id="nombre" placeholder="Nombre" required>
+        </div>
+
+        <div class="grupo-contenedor">
+            <label for="descripcion">Descripción:</label> <!--Descripcion del anuncio-->
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+        </div>
+
+        <div class="grupo-contenedor">
+            <label for="fecha-inicio">Fecha de Inicio:</label> <!--Fecha de inicio del anuncio-->
+            <input type="date" id="fecha-inicio" required>
+        </div>
+
+        <div class="grupo-contenedor">
+            <label for="fecha-final">Fecha de Fin:</label> <!--Fecha final del anuncio-->
+            <input type="date" id="fecha-final" required>
+        </div>
+
+        <div class="grupo-contenedor">
+        <label for="costo-por-dia">Costo por Día:</label> <!--Costo por dia-->
+        <input type="number" id="costo-por-dia" placeholder="Costo por día" required>
+        </div>
+
+        <button type="submit">Registrar Anuncio</button> <!--Boton para registrar el anuncio-->
+    </form>
+    <table id="tabla"> <!--Tabla donde se mostrara la lista de anuncios-->
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Días Publicados</th>
+                <th>Costo Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <h2 class="titulolista">Lista de anuncios</h2> <!--Titulo lista de anuncios-->
+        <tbody id="ListaAnuncios"></tbody> <!--Cuerpo de la tabla donde se listarán los anuncios-->
+    </table>
+    <p id="costototal"></p> <!--Parrafo para mostrar el costo total-->
+    <script src="script.js"></script> <!--Script del codigo-->
+    </div><!--Cierre contenedor principal-->
+</body>
+</html>
